@@ -11,3 +11,8 @@ spring:
           uri: lb://COMPRAS-SERVICIOS
           predicates:
             - Path=/compras/**
+        - id: Usuario-Servicio
+          uri: lb://USUARIOS-SERVICIOS
+          predicates:
+            - Path=/usuarios/**
+
