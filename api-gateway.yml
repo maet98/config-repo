@@ -6,6 +6,13 @@ spring:
     name: gateway-service
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
       routes:
         - id: Compra-Servicio
           uri: lb://COMPRAS-SERVICIOS
