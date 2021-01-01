@@ -9,10 +9,9 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "localhost:8080"
             allowedMethods:
-            - GET
-            - POST
+            - "*"
       routes:
         - id: Compra-Servicio
           uri: lb://COMPRAS-SERVICIOS
