@@ -1,23 +1,11 @@
 server:
   port: 8989
 
-spring:
-  application:
-    name: gateway-service
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "localhost:8080"
-            allowedMethods:
-            - "*"
-      routes:
-        - id: Compra-Servicio
-          uri: lb://COMPRAS-SERVICIOS
-          predicates:
-            - Path=/compras/**
-        - id: Usuario-Servicio
-          uri: lb://USUARIOS-SERVICIOS
-          predicates:
-            - Path=/usuarios/**
+zuul:
+  routes:
+    compras:
+      service-id: Compras-Servicios
+      path: /usuarios
+    usuarios:
+      service-id: Usuarios-Servicios
+      path: /compras
