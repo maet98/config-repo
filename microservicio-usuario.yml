@@ -6,12 +6,10 @@ spring:
     hibernate.ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:${MYSQL_URL: mysql://localhost:3306/usuarios}
+    url: jdbc:${MYSQL_URL:mysql://localhost:3306/usuarios}
     username: root
     password: 1998
     initialization-mode: never
-  application:
-    name: Usuarios-Servicios
 
 eureka:
   client:
@@ -21,3 +19,4 @@ eureka:
       defaultZone: http://${eureka-server:localhost}:8761/eureka
   instance:
     hostname: localhost
+
