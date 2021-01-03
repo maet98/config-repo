@@ -6,7 +6,7 @@ spring:
     hibernate.ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:mysql://${base-datos-compas:localhost}:3306/compras
+    url: jdbc:${MYSQL_URL:mysql://localhost:3306/compras}
     username: root
     password: 1998
     initialization-mode: never
