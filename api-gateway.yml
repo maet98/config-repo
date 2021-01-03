@@ -17,10 +17,10 @@ zuul:
     routes:
         usuarios:
             service-id: USUARIOS-SERVICIOS
-            path:/user/**
+            path: /user/**
         compras:
             service-id: COMPRAS-SERVICIOS
-            path=/event/**
+            path: /event/**
 
 eureka:
   client:
