@@ -21,6 +21,9 @@ zuul:
         compras:
             service-id: COMPRAS-SERVICIOS
             path: /event/**
+         notificacion:
+            service-id: NOTIFICACION-SERVICIO
+            path: /notificacion/**
 
 eureka:
   client:
