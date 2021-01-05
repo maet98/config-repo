@@ -21,7 +21,7 @@ zuul:
         compras:
             service-id: COMPRAS-SERVICIOS
             path: /event/**
-         notificacion:
+        notificacion:
             service-id: NOTIFICACION-SERVICIO
             path: /notificacion/**
 
